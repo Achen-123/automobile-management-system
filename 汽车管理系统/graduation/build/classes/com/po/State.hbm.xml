@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.po.State" table="state">
+    
+        <id name="snum" type="java.lang.Integer">
+            <column name="SNUM" /> <!-- 表中的字段名 -->
+           <generator class="native" />  <!-- 主键 ：自增-->
+        </id>
+        
+        <property name="scondition" type="java.lang.String">
+            <column name="SCONDITION" /><!-- 表中的字段名 -->
+        </property>
+        
+        <property name="number" type="java.lang.String">
+        	<column name="NUMBER" /> <!-- 表中的字段名 -->
+        </property>
+        
+    </class>
+</hibernate-mapping>

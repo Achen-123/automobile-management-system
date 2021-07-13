@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.po.Owners" table="owners">
+    
+        <id name="ownerid" type="java.lang.Integer">
+            <column name="OWNERID" /> <!-- 表中的字段名 -->
+           <generator class="native" />  <!-- 主键 ：自增-->
+        </id>
+        
+        <property name="carowner" type="java.lang.String">
+            <column name="carowner" /><!-- 表中的字段名 -->
+        </property>
+        
+        <property name="carnumber" type="java.lang.String">
+        	<column name="CARNUMBER" /> <!-- 表中的字段名 -->
+        </property>
+        
+        <property name="phonenum" type="java.lang.String">
+        	<column name="PHONENUM" /> <!-- 表中的字段名 -->
+        </property>
+        
+        <property name="ownersex" type="java.lang.String">
+        	<column name="OWNERSEX" /> <!-- 表中的字段名 -->
+        </property>
+        
+         <property name="memberid" type="java.lang.String">
+        	<column name="MEMBERID" /> <!-- 表中的字段名 -->
+        </property>
+    </class>
+</hibernate-mapping>

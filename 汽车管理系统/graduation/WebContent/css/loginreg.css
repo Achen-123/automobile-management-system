@@ -1,0 +1,67 @@
+	.ta {
+	margin:100px auto;
+	}
+	
+	.di{
+	background-color:white;
+		width:300px;
+		height:50px;
+		opacity:0.6;
+		/*水平居中*/
+		margin:0 auto;
+	
+	}
+	/*reg页面的布局格式*/
+	.ti{
+	background-color:white;
+		width:650px;
+		height:50px;
+		opacity:0.6;
+		/*水平居中*/
+		margin:50px 300px;
+	}
+	/*carreg页面的布局格式*/
+	.ci{
+	/*background-color:white;*/
+		width:300px;
+		height:50px;
+		opacity:0.6;
+		/*水平居中*/
+		margin:50px auto;
+	
+	}
+	
+.di .hi{
+	font-size:25px;
+	/* 字间距：letter-spacing:  */
+	letter-spacing:5px;
+	height:50px;
+	/*垂直居中*/
+	line-height:50px;
+	margin-left:70px;
+	}
+	
+.one{
+	background-color:#E6E6FA;
+	width:300px;
+	height:50px;
+	/*垂直居中*/
+	line-height:50px;
+	font-size:18px;
+	margin-left: 300px;
+	margin-top:30px;
+	/*内边距*/
+	padding-left:20px;
+	/*字间距letter-spacing*/
+	letter-spacing:9px;
+	
+}
+ a{
+	text-decoration:none;
+	font-family:楷体;
+	color:black;
+}
+/*为元素鼠标点击后*/
+	 a:hover{
+	color:#f10215;
+	}

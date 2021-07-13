@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default" strict-method-invocation="false">
+		
+		<!-- 员工管理功能 -->
+		<action name="regAction" class="com.action.UserAction"  method="reg">
+		<result name="regError">/reg.jsp</result>
+		<result name="regSuccess">/login.jsp</result>
+		
+		</action>
+		<action name="loginAction" class="com.action.UserAction"  method="login" >
+		<result name="loginError">/login.jsp</result>
+		<result name="loginSuccess">/main.jsp</result>		
+		</action>
+		
+		<action name="logoutAction" class="com.action.UserAction" method="logout" >
+		<result name="logoutSuccess">/admin.jsp</result>
+		</action>
+		
+		<action name="showWorkerAction" class="com.action.UserAction" method="showWorker">
+		<result name="showSuccess">/workershow.jsp</result>
+		</action>
+		
+		<action name="addWorkerAction" class="com.action.UserAction" method="addWorker">
+		<result name="addError">/employee.jsp</result>
+		<result name="addSuccess">/reg.jsp</result>
+		</action>
+		
+		<action name="addifStateAction" class="com.action.UserAction" method="addifState">
+		<result name="addStateError">/employee.jsp</result>
+		<result name="addStateSuccess">/workstate.jsp</result>
+		
+		
+		</action>
+		
+		<action name="addStateAction" class="com.action.UserAction" method="addState">
+		<result name="StateError">/workstate.jsp</result>
+		<result name="StateSuccess">/workstate.jsp</result>
+		</action>
+		
+		<action name="workstateUpdateAction" class="com.action.UserAction" method="workstateUpdate">
+		
+		<result name="updateError">/statechange.jsp</result>
+		<result name="updateSuccess">/statechange.jsp</result>
+		
+		</action>
+		
+		<action name="showWorkstateAction" class="com.action.UserAction" method="showWorkstate">
+		<result name="showWorkstateSuccess">/showstate.jsp</result>
+		</action>
+		
+		<action name="lookquitWorkerAction"  class="com.action.UserAction" method="lookquitWorker">
+		<result name="Successlook">/quitworkers.jsp</result>
+		</action>
+		
+		<action name="deleteWorkerAction" class="com.action.UserAction" method="deleteWorker">
+		<result name="deleteworkerSuccess" type="redirect">lookquitWorkerAction</result>
+		</action>
+		
+		<action name="vaguequeryActionbyname" class="com.action.UserAction" method="vaguequery">
+		<result name="querySuccess">/workershow.jsp</result>
+		</action>
+		
+		<!-- 通配符当表单url为loginAction.action时就是调用login方法，且*action要和{1}一起使用 -->
+		
+		<action name="*Action" class="com.action.MainAction" method="{1}">
+		<result name="loginError">/login.jsp</result>
+		<result name="employeeSuccess">/employee.jsp</result>
+		<result name="carSuccess">/car.jsp</result>
+		<result name="conditionSuccess">/condition.jsp</result>
+		<result name="ownerSuccess">/owner.jsp</result>
+		<result name="orderSuccess">/order.jsp</result>
+		</action>
+		
+		<!-- 维修车辆功能 -->
+		<action name="addCarinformationAction" class="com.action.CarAction" method="addCarinformation">
+		<result name="addError">/regcar.jsp</result>
+		<result name="addSuccess">/searchcar.jsp</result>
+		</action>
+		
+		<action name="searchAllcarAction" class="com.action.CarAction" method="searchAllcar">
+		<result name="searchSuccess">/showcar.jsp</result>
+		</action>
+		
+		<action name="carInformationchangeAction" class="com.action.CarAction" method="carInformationchange">
+		<result name="addinformError">/carchange.jsp</result>
+		<result name="addinformSuccess">/carchange.jsp</result>
+		</action>
+		
+		<action name="searchcarnumberAction"  class="com.action.CarAction"  method="searchcarnumber" >
+		<result name="searchSuccess">/showcar.jsp</result>
+		</action>
+		
+		<!-- 维修状态功能 -->
+		<action name="addCarStateAction" class="com.action.CarStateAction" method="addCarState">
+		<result name="carstateError">/carstate.jsp</result>
+		<result name="carstateSuccess">/condition.jsp</result>
+		</action>
+		
+		<action name="searchCarstateAction" class="com.action.CarStateAction" method="searchCarstate">
+		<result name="searchSuccess">/showcarstate.jsp</result>
+		</action>
+		
+		<action name="changeCarstateAction" class="com.action.CarStateAction" method="changeCarstate">
+		<result name="CarstateError">/carstatechange.jsp</result>
+		<result name="CarstateSuccess">/condition.jsp</result>
+		</action>
+		
+		<action name="searchCarnumAction" class="com.action.CarStateAction" method="searchCarnum">
+		<result name="searchSuccess">/showcarstate.jsp</result>
+		</action>
+		
+		<!-- 车主信息功能 -->
+		<action name="AddinformationAction" class="com.action.OwnerAction" method="Addinformation">
+		<result name="addownerError">/ownerreg.jsp</result>
+		<result name="addownerSuccess">/owner.jsp</result>
+		</action>
+		
+		<action name="searchInformationAction" class="com.action.OwnerAction" method="searchInformation">
+		<result name="searchSuccess">/showowners.jsp</result>
+		</action>
+		
+		<action name="UpdateordeleteownerAction"  class="com.action.OwnerAction" method="Updateordelete">
+		<result name="updateError">/ownchange.jsp</result>
+		<result name="updateSuccess">/owner.jsp</result>
+		</action>
+		
+		<action name="searchOwnerAction" class="com.action.OwnerAction"  method="searchOwner">
+		<result name="searchSuccess">/showowners.jsp</result>
+		</action>
+		
+		<!-- 订单信息管理功能 -->
+		<action name="addInformationAction" class="com.action.OrderAction" method="addInformation">
+		<result name="addError">/orderreg.jsp</result>
+		<result name="addSuccess">/order.jsp</result>
+		</action>
+		
+		<action name="searchAllAction" class="com.action.OrderAction" method="searchAll">
+		<result name="searchSuccess">/showorder.jsp</result>
+		</action>
+		
+		<action name="UpdateordeleteAction" class="com.action.OrderAction"  method="Updateordelete">
+		<result name="updateError">/orderchange.jsp</result>
+		<result name="updateSuccess">/order.jsp</result>
+		</action>
+		
+		<action name="vaguequeryAction" class="com.action.OrderAction" method="vaguequery">
+		<result name="querySuccess">/showorder.jsp</result>
+		</action>
+		
+		<action name="DeleteorderAction" class="com.action.OrderAction" method="Deleteorder">
+		<result name="DeleteSuccess" type="redirect" >searchAllAction</result>
+		</action>
+	</package>
+
+
+
+
+
+</struts>

@@ -1,0 +1,72 @@
+.text{
+	/*进行居中*/
+	 height: 100px;
+    width: 370px;
+    margin: 0 auto;
+}
+
+h2{
+	background-color:white;
+		width:200px;
+		height:50px;
+		opacity:0.6;
+		/*水平居中*/
+		margin:0 auto;
+}
+
+span{
+	color:#696969;
+	font-size:15px;
+}
+.mian{
+	background-color:white;
+		width:300px;
+		height:50px;
+		opacity:0.6;
+	
+	font-size:25px;
+	/* 字间距：letter-spacing:  */
+	letter-spacing:5px;
+	height:50px;
+	/*垂直居中*/
+	line-height:50px;
+	margin-bottom:100px;
+	margin-left:90px;
+	
+}
+.one ,.two, .three, .four, .five{
+	background-color:#E6E6FA;
+	width:350px;
+	height:50px;
+	/*垂直居中*/
+	line-height:50px;
+	font-size:20px;
+	margin-left:10px;
+	margin-top:10px;
+	/*内边距*/
+	padding-left:10px;
+	/*字间距letter-spacing*/
+	letter-spacing:7px;
+	
+}
+ div a{
+	text-decoration:none;
+	font-family:楷体;
+	color:black;
+}
+
+table{
+	margin:0px auto;
+	border:1px solid black
+	
+	
+}
+tr,td{
+	width:98px;
+	height:20px;
+}
+
+/*为元素鼠标点击后*/
+	div a:hover{
+	color:#f10215;
+	}
